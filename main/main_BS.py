@@ -6,7 +6,7 @@ from core.functions import *
 import matplotlib.pyplot as plt
 from functions import *
 
-test_data_BS = pd.read_csv(r"/test_data_BS.csv")
+test_data_BS = pd.read_csv(r"/data/test_data_BS.csv")
 data_list = []
 seq_len = 10
 
