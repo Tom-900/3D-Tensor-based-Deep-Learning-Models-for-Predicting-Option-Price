@@ -54,10 +54,10 @@ print("Shape of the Test Input:", test_input.shape)
 test_label = torch.tensor(test_label)
 print("Shape of the Test Label:", test_label.shape)
 
-torch.save(train_input, r"\torch_data\train_input.pt")
-torch.save(train_label, r"\torch_data\train_label.pt")
-torch.save(test_input, r"\torch_data\test_input.pt")
-torch.save(test_label, r"\torch_data\test_label.pt")
+torch.save(train_input, r"\torch-data\train_input.pt")
+torch.save(train_label, r"\torch-data\train_label.pt")
+torch.save(test_input, r"\torch-data\test_input.pt")
+torch.save(test_label, r"\torch-data\test_label.pt")
 
 
 
