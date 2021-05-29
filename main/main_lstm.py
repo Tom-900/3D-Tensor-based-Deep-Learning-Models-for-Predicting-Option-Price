@@ -150,26 +150,26 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    train_input = torch.load(r"\torch_data\train_input.pt").float().cuda()
+    train_input = torch.load(r"\data\torch-data\train_input.pt").float().cuda()
 
     train_input_mean = torch.mean(train_input, dim=0, keepdim=True).float()
     train_input_std = torch.std(train_input, dim=0, keepdim=True).float()
     train_input_normalization = Normalization(train_input_mean, train_input_std)
     train_input = train_input_normalization.normalize(train_input)
 
-    train_label = torch.load(r"\torch_data\train_label.pt").float().cuda()
+    train_label = torch.load(r"\data\torch-data\train_label.pt").float().cuda()
     train_label_mean = torch.mean(train_label, dim=0, keepdim=False)
     train_label_std = torch.std(train_label, dim=0, keepdim=False)
     train_label_normalization = Normalization(train_label_mean, train_label_std)
     train_label = train_label_normalization.normalize(train_label)
 
-    test_input = torch.load(r"\torch_data\test_input.pt").float().cuda()
+    test_input = torch.load(r"\data\torch-data\test_input.pt").float().cuda()
     test_input_mean = torch.mean(test_input, dim=0, keepdim=True)
     test_input_std = torch.std(test_input, dim=0, keepdim=True)
     test_input_normalization = Normalization(test_input_mean, test_input_std)
     test_input = test_input_normalization.normalize(test_input)
 
-    test_label = torch.load(r"\torch_data\test_label.pt").float().cuda()
+    test_label = torch.load(r"\data\torch-data\test_label.pt").float().cuda()
     test_label_mean = torch.mean(test_label, dim=0, keepdim=False)
     test_label_std = torch.std(test_label, dim=0, keepdim=False)
     test_label_normalization = Normalization(test_label_mean, test_label_std)
